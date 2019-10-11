@@ -23,3 +23,15 @@ For each connection linking two cities, we have the distance separating in kilom
 
 ## What can we do ?
 
+
+### Input
+- Departure city
+- Arrival citiy
+- Depth in Tree search
+
+### Output
+- Show the first trip found <br>
+- Show all trips found <br>
+- Show the shortest trip <br>
+- Show the fastest trip <br>
+- Show trip's tree <br>
