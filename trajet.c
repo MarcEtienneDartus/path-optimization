@@ -226,7 +226,7 @@ void LectureConnexion(char* nomFichier, city** listeVille){
 	}
 	else
 	{
-		printf (" Probleme lors de l'ouverture du fichier %s\n", nomFichier ) ;
+		printf (" Issue when file openning %s\n", nomFichier ) ;
 	}
 }
 
@@ -276,7 +276,7 @@ void LectureVille(char* nomFichier, city** listeVille){
 	}
 	else
 	{
-		printf (" Probleme lors de l'ouverture du fichier %s\n", nomFichier ) ;
+		printf (" Issue when file openning %s\n", nomFichier ) ;
 	}
 }
 

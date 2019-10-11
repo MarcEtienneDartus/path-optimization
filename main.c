@@ -42,7 +42,7 @@ void AfficherListeNoeudParent(noeuds* noeud, bool first){
 		if(first)
 		{
 		 printf("%s",noeud->depart->depart);
-		 printf(" avec une duree de %s et une distance de :%d",ConvertDureeMinuteHeure(noeud->dureeTotale),noeud->distanceTotale);
+		 printf(" with 	duration of %s and a distance of :%d",ConvertDureeMinuteHeure(noeud->dureeTotale),noeud->distanceTotale);
 		}
 		else
 		{
@@ -61,13 +61,13 @@ void AfficherListeNoeud(listeNoeuds* listeNoeud){
 }
 
 int DemanderVille(char* depart, char* arrivee){
-	printf("Ecrivez la ville de depart : ");
+	printf("Write the departure city : ");
 	scanf("%s",depart);
-	printf("Ecrivez la ville de d'arrivee : ");
+	printf("Write the end city : ");
 	scanf("%s",arrivee);
 	printf("\n");
 	int profondeur = 0;
-	printf("Quelle profondeur de recherche voulez vous ?");
+	printf("How deep do you want to search in the tree ? (int)");
 	scanf("%d",&profondeur);
 	return profondeur;
 }
@@ -117,8 +117,8 @@ void AffichageArbreTrouvee(noeuds* noeud, int etape){
 void Menu(){
 	int nbVille = 23;
 	city** listeVille = (city**) malloc(nbVille*sizeof(city*));
-	LectureVille("villes.csv",listeVille);
-	LectureConnexion("connexions.csv",listeVille);
+	LectureVille("city.csv",listeVille);
+	LectureConnexion("connection.csv",listeVille);
 	
 	char depart[30];
 	char arrivee[30];
@@ -130,13 +130,13 @@ void Menu(){
 	do
 	{
 		printf("\n");
-		printf("#1 Afficher un trajet trouve\n");
-		printf("#2 Afficher tous les trajets trouves\n");
-		printf("#3 Afficher le trajet le plus court\n");
-		printf("#4 Afficher le trajet le plus rapide\n");
-		printf("#5 Afficher l arbre des trajets\n");
-		printf("#6 Quitter\n");
-		printf("Votre choix : ");
+		printf("#1 Show a trips found\n");
+		printf("#2 Show all trips found\n");
+		printf("#3 Show the shortest route\n");
+		printf("#4 Show the fastest route\n");
+		printf("#5 Show trip tree\n");
+		printf("#6 Quit\n");
+		printf("Choice : ");
 		scanf("%d",&choixFonction);
 		
 		printf("\n");
